@@ -1,0 +1,194 @@
+*
+    box-sizing: border-box
+
+@font-face 
+    font-family: 'DIN Pro Regular'
+    src: url('../fonts/DINPro.eot')
+    src: url('../fonts/DINPro.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DINPro.woff') format('woff'),
+    url('../fonts/DINPro.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+
+@font-face
+    font-family: 'DIN Pro Bold'
+    src: url('../fonts/DINPro-Bold.eot')
+    src: url('../fonts/DINPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DINPro-Bold.woff') format('woff'),
+    url('../fonts/DINPro-Bold.ttf') format('truetype')
+    font-weight: normal
+    font-style: normal
+
+.modal-dialog 
+    color: black
+    font-family: 'DIN Pro Regular'
+body
+    margin: 0
+    padding: 0
+    font-family: 'DIN Pro Regular'
+.main-block
+    max-width: 975px
+    margin: 0 auto
+    text-align: center
+    padding: 43px 20px
+    &__title
+        font-size: 35px
+        word-spacing: 0
+        text-transform: uppercase
+        letter-spacing: 0.3px
+    &__desc
+        padding-top: 36px
+        font-size: 14px
+        letter-spacing: -0.4px
+        line-height: 19px
+
+.project-list__item-overlay
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    margin: 0
+    padding: 0
+    transition: .2s
+    display: flex
+    align-items: center
+    justify-content: center
+    & button
+        opacity: 0
+        transform: .5s
+.project-list
+    padding: 52px 0px 84px
+    &__item
+        display: flex
+        height: 464px
+        cursor: pointer
+        align-items: flex-end
+        padding-bottom: 31px
+        color: #fff
+        text-transform: uppercase
+        font-weight: 600
+        font-size: 17px
+        letter-spacing: 2px
+        justify-content: center
+        &:nth-child(1)
+            background: url(../img/items/item-11.jpg)
+            background-size: contain
+        &:nth-child(2)
+            background: url(../img/items/item-22.jpg)
+            background-size: contain
+        &:nth-child(3)
+            background:url(../img/items/item-3.jpg)
+            background-size: contain    
+        &:hover
+            & .project-list__item-overlay
+                background: #00000082   
+                & button
+                    opacity: 1
+    &__button
+            display: flex
+            justify-content: center   
+            margin-top: 68px 
+.button
+    font-size: 14px
+    text-transform: uppercase
+    border: 3px solid #00264c
+    background: none
+    padding: 10px 87px
+    font-family: 'DIN Pro Bold', sans-serif
+    font-weight: 600
+    letter-spacing: -0.3px
+    word-spacing: -1px
+    &__white
+        color:#fff
+        border-color: #fff
+        padding: 10px 49px
+
+footer
+    background-color: #0d1b2b
+    color: #fff
+    padding-bottom: 75px
+.footer
+    &__form
+        margin-top: 26px
+        border: 4px solid #243448
+        padding: 27px 28px
+        text-align: center
+        max-width: 500px
+        & a
+            font-size: 12px
+            display: block
+            text-decoration: underline
+            margin-bottom: 10px
+.contacts
+    padding-top: 56px
+    &__title
+        text-transform: uppercase
+        font-family: 'DIN Pro Bold', sans-serif
+        font-size: 37px
+        letter-spacing: -1.5px
+    &__description
+        margin-top: 42px
+        margin-left: 4px
+        margin-bottom: 13px
+        font-size: 13.9px
+    &__address
+        margin-left: 4px
+        font-size: 13.9px
+        word-spacing: -2px
+        margin-bottom: 32px
+    &__phones-list
+        list-style: none
+        padding-left: 0px
+        font-size: 24px
+        letter-spacing: -1.4px
+        margin-left: 4px
+    
+    &__social-list
+        list-style: none
+        padding-left: 0px
+        font-size: 14px
+        border-left: 2px solid #0058a7
+        margin-left: 19px
+        padding-left: 29px
+        padding-top: 15px
+        padding-bottom: 9px
+        line-height: 18px
+    &__social-list-email
+        margin-bottom: 18px
+input, textarea
+    display: inline-block
+    width: 100%
+    padding: 15px 29px
+    background: #243448
+    border: 0
+    font-size: 11px
+    margin-bottom: 2px
+    color: #fff
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder
+    color: #dcdee2
+
+.modal__img
+    width: auto
+    margin-bottom: 20px 
+@media (min-width: 576px)
+    .modal-dialog 
+        max-width: 590px
+        margin: 1.75rem auto
+
+@media (min-width: 1200px)
+    .container, .container-lg, .container-md, .container-sm, .container-xl
+        max-width: 1294px
+@media (max-width: 1300px) 
+    .project-list
+        &__item
+            background-size: cover !important   
+@media (max-width: 1300px) 
+    .project-list
+        &__item
+            background-size: cover !important   
+            background-position: bottom !important
+@media (max-width: 991px) 
+    .project-list
+        &__item
+            background-size: cover !important   
+            height: 400px
